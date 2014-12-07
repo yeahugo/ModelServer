@@ -1,0 +1,46 @@
+*** Starting uWSGI 2.0.8 (64bit) on [Sat Dec  6 23:44:34 2014] ***
+compiled with version: 4.2.1 Compatible Apple LLVM 5.1 (clang-503.0.40) on 06 December 2014 22:44:30
+os: Darwin-14.0.0 Darwin Kernel Version 14.0.0: Fri Sep 19 00:26:44 PDT 2014; root:xnu-2782.1.97~2/RELEASE_X86_64
+nodename: Git-Server.local
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /Users/yeahugo/Documents/project/3D Printer/ModelServer/ModelServer
+detected binary path: /usr/local/bin/uwsgi
+your processes number limit is 709
+your memory page size is 4096 bytes
+detected max file descriptor number: 4864
+lock engine: OSX spinlocks
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :9090 fd 3
+Python version: 2.7.6 (default, Sep  9 2014, 15:04:36)  [GCC 4.2.1 Compatible Apple LLVM 6.0 (clang-600.0.39)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x7fadc3401940
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 800360 bytes (781 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x7fadc3401940 pid: 24031 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 24031)
+spawned uWSGI worker 1 (pid: 24032, cores: 1)
+spawned uWSGI worker 2 (pid: 24033, cores: 1)
+spawned uWSGI worker 3 (pid: 24034, cores: 1)
+spawned uWSGI worker 4 (pid: 24035, cores: 1)
+spawned uWSGI worker 5 (pid: 24036, cores: 1)
+spawned uWSGI worker 6 (pid: 24037, cores: 1)
+spawned uWSGI worker 7 (pid: 24038, cores: 1)
+spawned uWSGI worker 8 (pid: 24039, cores: 1)
+spawned uWSGI worker 9 (pid: 24040, cores: 1)
+spawned uWSGI worker 10 (pid: 24041, cores: 1)
+unable to stat() uws.tc, events will be triggered as soon as the file is created
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
