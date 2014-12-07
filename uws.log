@@ -44,3 +44,19 @@ invalid request block size: 21573 (max 4096)...skip
 invalid request block size: 21573 (max 4096)...skip
 invalid request block size: 21573 (max 4096)...skip
 invalid request block size: 21573 (max 4096)...skip
+...brutally killing workers...
+worker 10 buried after 1 seconds
+worker 9 buried after 1 seconds
+worker 8 buried after 1 seconds
+worker 7 buried after 1 seconds
+worker 6 buried after 1 seconds
+worker 5 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 1 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /Users/yeahugo/Documents/project/3D Printer/ModelServer/ModelServer
+closing all non-uwsgi socket fds > 2 (max_fd = 4864)...
+found fd 3 mapped to socket 0 (:9090)
+running /usr/local/bin/uwsgi

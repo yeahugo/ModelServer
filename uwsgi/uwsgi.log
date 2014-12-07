@@ -1,0 +1,18 @@
+*** Starting uWSGI 2.0.8 (64bit) on [Sun Dec  7 12:46:07 2014] ***
+compiled with version: 4.2.1 Compatible Apple LLVM 5.1 (clang-503.0.40) on 06 December 2014 22:44:30
+os: Darwin-14.0.0 Darwin Kernel Version 14.0.0: Fri Sep 19 00:26:44 PDT 2014; root:xnu-2782.1.97~2/RELEASE_X86_64
+nodename: Git-Server.local
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /Users/yeahugo/Documents/project/3D Printer/ModelServer/ModelServer/uwsgi
+detected binary path: /usr/local/bin/uwsgi
+chdir() to /Users/yeahugo/Documents/project/3D Printer/ModelServer/ModelServer
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 709
+your memory page size is 4096 bytes
+detected max file descriptor number: 4864
+lock engine: OSX spinlocks
+thunder lock: disabled (you can enable it with --thunder-lock)
+bind(): Permission denied [core/socket.c line 761]
