@@ -1,6 +1,9 @@
 from django.http import HttpResponse
 from . import docs
 
+user = authenticate(username=username, password=password)
+assert isinstance(user, mongoengine.django.auth.User)
+
 def index(request):
     user1 = docs.User(
         username='Perchouli',

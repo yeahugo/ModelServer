@@ -10,9 +10,13 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+import mongoengine
 from mongoengine import connect
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
+DBNAME = 'ModelDB'
+
+TEST_RUNNER = 'ModelServer.tests.NoSQLTestRunner'
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
@@ -31,6 +35,16 @@ SESSION_ENGINE = 'mongoengine.django.sessions'
 SESSION_SERIALIZER = 'mongoengine.django.sessions.BSONSerializer'
 
 # Application definition
+
+_MONGODB_USER = 'sa'
+_MONGODB_PASSWD = 'sa'
+_MONGODB_HOST = 'Git-Server.local'
+_MONGODB_NAME = 'ModelDB'
+_MONGODB_DATABASE_HOST = \
+        'mongodb://%s:%s@%s/%s' \
+        % (_MONGODB_USER, _MONGODB_PASSWD, _MONGODB_HOST, _MONGODB_NAME)
+
+mongoengine.connect(_MONGODB_NAME)
 
 INSTALLED_APPS = (
     'django.contrib.admin',
@@ -74,8 +88,9 @@ WSGI_APPLICATION = 'ModelServer.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': '',
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 #        'ENGINE': 'django.db.backends.dummy'
 #        'ENGINE': 'django_mongodb_engine',
 #        'NAME':'ai_models'

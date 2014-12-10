@@ -1,6 +1,6 @@
 €}q(U
-toys.views]qUindexqaUModelServer.urls]qUurlpatternsqaU
-toys.admin]Uviews]qUindexqaUdocs]qUUserq	aUmodels.admin]Udjango_wsgi]q
-UapplicationqaUindex]q(UappqUhelloqUurlsqUapplicationqeUmodels.models]qUModelqaUtest]qUapplicationqaUhello]qUrunqaUModelServer.settings]q(U	DATABASESqUMIDDLEWARE_CLASSESqUUSE_I18NqULANGUAGE_CODEqUROOT_URLCONFqUAUTH_USER_MODELqU
-SECRET_KEYqUAUTHENTICATION_BACKENDSqUSESSION_SERIALIZERq U	TIME_ZONEq!UMONGOENGINE_USER_DOCUMENTq"USESSION_ENGINEq#UWSGI_APPLICATIONq$UALLOWED_HOSTSq%UBASE_DIRq&U
-STATIC_URLq'UUSE_L10Nq(UDEBUGq)UUSE_TZq*UINSTALLED_APPSq+UTEMPLATE_DEBUGq,eu.
+toys.views]qUindexqaUtoys.models]qUToyqaUModelServer.urls]qUurlpatternsqaU
+toys.admin]Uviews]qUindexq	aUdocs]q
+UUserqaUmodels.admin]Udjango_wsgi]qUapplicationqaUindex]q(UappqUhelloqUurlsqUapplicationqeUmodels.models]qUModelqaUtest]qUapplicationqaUhello]qUrunqaUModelServer.settings]q(ULANGUAGE_CODEqUUSE_I18NqUMIDDLEWARE_CLASSESqUROOT_URLCONFqUAUTH_USER_MODELqU
+SECRET_KEYqUAUTHENTICATION_BACKENDSq USESSION_SERIALIZERq!U	TIME_ZONEq"UDBNAMEq#UMONGOENGINE_USER_DOCUMENTq$USESSION_ENGINEq%UWSGI_APPLICATIONq&UALLOWED_HOSTSq'UBASE_DIRq(UTEST_RUNNERq)U
+STATIC_URLq*U	DATABASESq+UDEBUGq,UUSE_TZq-UINSTALLED_APPSq.UUSE_L10Nq/UTEMPLATE_DEBUGq0eu.
