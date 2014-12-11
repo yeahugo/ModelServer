@@ -54,6 +54,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'mongoengine.django.mongo_auth',
+    'mongonaut',
 #    'django_mongoengine.admin.sites',
 #    'django_mongoengine.admin',
     'toys',

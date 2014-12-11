@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from toys.models import Toy
 from django.core import serializers
+from toys import mongoadmin
 
 # Create your views here.
 def index(request):
