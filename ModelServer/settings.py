@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 import os
 import mongoengine
 from mongoengine import connect
+import mongonaut
+
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 DBNAME = 'ModelDB'

@@ -1,6 +1,6 @@
 €}q(U
 toys.views]qUindexqaUtoys.models]q(UImageqUToyqeUModelServer.urls]qUurlpatternsqaU
 toys.admin]q	U	UserAdminq
-aUviews]qUindexqaUdocs]qUUserqaUtoys.mongoadmin]qUToyAdminqaUmodels.admin]Udjango_wsgi]qUapplicationqaUindex]q(UappqUhelloqUurlsqUapplicationqeUurls]qUurlpatternsqaUmodels.models]qUModelqaUtest]qUapplicationqaUhello]qUrunqaUModelServer.settings]q (ULANGUAGE_CODEq!UUSE_I18Nq"UMIDDLEWARE_CLASSESq#UROOT_URLCONFq$UAUTH_USER_MODELq%U
-SECRET_KEYq&UAUTHENTICATION_BACKENDSq'USESSION_SERIALIZERq(U	TIME_ZONEq)UDBNAMEq*UMONGOENGINE_USER_DOCUMENTq+USESSION_ENGINEq,UWSGI_APPLICATIONq-UALLOWED_HOSTSq.UBASE_DIRq/UTEST_RUNNERq0U
-STATIC_URLq1U	DATABASESq2UDEBUGq3UUSE_TZq4UINSTALLED_APPSq5UUSE_L10Nq6UTEMPLATE_DEBUGq7eu.
+aUviews]qUindexqaUdocs]qUUserqaUtoys.mongoadmin]qUToyAdminqaUmodels.models]qUModelqaUmodels.admin]Udjango_wsgi]qUapplicationqaUmongoadmin.sites]q(UMongoAdminSiteqULOGIN_FORM_KEYqUsiteqeUindex]q(UappqUhelloqUurlsqUapplicationqeUurls]qUurlpatternsqaUmongonaut.views]q (UDocumentAddFormViewq!U	IndexViewq"UDocumentDeleteViewq#UDocumentEditFormViewq$UDocumentListViewq%UDocumentDetailViewq&UAppListViewq'eUtest]q(Uapplicationq)aUhello]q*Urunq+aUModelServer.settings]q,(ULANGUAGE_CODEq-UUSE_I18Nq.UMIDDLEWARE_CLASSESq/UROOT_URLCONFq0UAUTH_USER_MODELq1U
+SECRET_KEYq2UAUTHENTICATION_BACKENDSq3USESSION_SERIALIZERq4U	TIME_ZONEq5UDBNAMEq6UMONGOENGINE_USER_DOCUMENTq7USESSION_ENGINEq8UWSGI_APPLICATIONq9UALLOWED_HOSTSq:UBASE_DIRq;UTEST_RUNNERq<U
+STATIC_URLq=U	DATABASESq>UDEBUGq?UUSE_TZq@UINSTALLED_APPSqAUUSE_L10NqBUTEMPLATE_DEBUGqCeu.
