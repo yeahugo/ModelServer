@@ -1,6 +1,6 @@
 €}q(U
-toys.views]qUindexqaUtoys.models]qUToyqaUModelServer.urls]qUurlpatternsqaU
-toys.admin]qU	UserAdminq	aUviews]q
-UindexqaUdocs]qUUserqaUtoys.mongoadmin]qUToyAdminqaUmodels.admin]Udjango_wsgi]qUapplicationqaUindex]q(UappqUhelloqUurlsqUapplicationqeUurls]qUurlpatternsqaUmodels.models]qUModelqaUtest]qUapplicationqaUhello]qUrunqaUModelServer.settings]q(ULANGUAGE_CODEq UUSE_I18Nq!UMIDDLEWARE_CLASSESq"UROOT_URLCONFq#UAUTH_USER_MODELq$U
-SECRET_KEYq%UAUTHENTICATION_BACKENDSq&USESSION_SERIALIZERq'U	TIME_ZONEq(UDBNAMEq)UMONGOENGINE_USER_DOCUMENTq*USESSION_ENGINEq+UWSGI_APPLICATIONq,UALLOWED_HOSTSq-UBASE_DIRq.UTEST_RUNNERq/U
-STATIC_URLq0U	DATABASESq1UDEBUGq2UUSE_TZq3UINSTALLED_APPSq4UUSE_L10Nq5UTEMPLATE_DEBUGq6eu.
+toys.views]qUindexqaUtoys.models]q(UImageqUToyqeUModelServer.urls]qUurlpatternsqaU
+toys.admin]q	U	UserAdminq
+aUviews]qUindexqaUdocs]qUUserqaUtoys.mongoadmin]qUToyAdminqaUmodels.admin]Udjango_wsgi]qUapplicationqaUindex]q(UappqUhelloqUurlsqUapplicationqeUurls]qUurlpatternsqaUmodels.models]qUModelqaUtest]qUapplicationqaUhello]qUrunqaUModelServer.settings]q (ULANGUAGE_CODEq!UUSE_I18Nq"UMIDDLEWARE_CLASSESq#UROOT_URLCONFq$UAUTH_USER_MODELq%U
+SECRET_KEYq&UAUTHENTICATION_BACKENDSq'USESSION_SERIALIZERq(U	TIME_ZONEq)UDBNAMEq*UMONGOENGINE_USER_DOCUMENTq+USESSION_ENGINEq,UWSGI_APPLICATIONq-UALLOWED_HOSTSq.UBASE_DIRq/UTEST_RUNNERq0U
+STATIC_URLq1U	DATABASESq2UDEBUGq3UUSE_TZq4UINSTALLED_APPSq5UUSE_L10Nq6UTEMPLATE_DEBUGq7eu.

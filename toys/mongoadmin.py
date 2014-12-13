@@ -5,8 +5,6 @@ class ToyAdmin(MongoAdmin):
     list_fields = ('name','thumbnail','image','create_date')
     search_fields = ('name')
 
-    print "ToyAdmin here!!!!"
-
     def has_view_permission(self, request):
         return True
 

@@ -10,10 +10,14 @@ from ModelServer.settings import DBNAME
 #    image_url = models.ImageField(upload_to='toys')
 #    create_date = models.DateField()
 
+class Image(EmbeddedDocument):
+    name = StringField(max_length=200)
+    image_path = StringField(max_length=200)
+
 class Toy(Document):
     name = StringField(max_length=200)
-    thumbnail = ListField(ImageField())
-    image = ListField(ImageField())
+    thumbnail = ListField(EmbeddedDocumentField(Image))
+    image = ListField(EmbeddedDocumentField(Image))
     create_date = DateTimeField()
 
 #    meta = {
