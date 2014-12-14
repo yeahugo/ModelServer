@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 import os
 import mongoengine
 from mongoengine import connect
-import mongonaut
+#import mongonaut
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
@@ -56,7 +56,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'mongoengine.django.mongo_auth',
-    'mongonaut',
+#    'mongonaut',
 #    'django_mongoengine.admin.sites',
 #    'django_mongoengine.admin',
     'toys',
