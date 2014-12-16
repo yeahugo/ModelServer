@@ -10,5 +10,6 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^models/',include('toys.urls')),
     url(r'^models/.*$',include('toys.urls')),
+    url(r'^api/',include('files.urls')),
 #    url(r'mongonaut',include('mongonaut.urls'))
 )

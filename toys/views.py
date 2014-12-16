@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from django.http import HttpResponse
 from toys.models import Toy
 from django.core import serializers
@@ -23,12 +22,12 @@ def detail(request,oid):
     images = []
     thumbnail = []
     for image in toy.images:
-        image_url = "api/image/"+str(toy.id)
+        image_url = "api/image/"+str(toy.id)+"/"+str(image.image.name)
         images.append(image_url)
     for thumb in toy.thumbnail:
-        thumbnail_url = "api/thumbnail/"+str(toy.id)
+        thumbnail_url = "api/thumbnail/"+str(toy.id)+"/"+str(thumb.image.name)
         thumbnail.append(thumbnail_url)
-        toyDic = {"name":toy.name,"image":images,"thumbnail":thumbnail}
+    toyDic = {"name":toy.name,"image":images,"thumbnail":thumbnail}
     toyJson = json.dumps(toyDic)
     print toyJson
     return HttpResponse(toyJson)
