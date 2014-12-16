@@ -21,13 +21,18 @@ def detail(request,oid):
     toy = Toy.objects(pk=oid).first()
     images = []
     thumbnail = []
+    gcodes = []
     for image in toy.images:
         image_url = "api/image/"+str(toy.id)+"/"+str(image.image.name)
         images.append(image_url)
     for thumb in toy.thumbnail:
         thumbnail_url = "api/thumbnail/"+str(toy.id)+"/"+str(thumb.image.name)
         thumbnail.append(thumbnail_url)
-    toyDic = {"name":toy.name,"image":images,"thumbnail":thumbnail}
+    for gcode in toy.gcode:
+        gcode_url = "api/gcode/"+str(toy.id)+"/"+str(gcode.data.name)
+        gcodes.append(gcode_url)
+    toyDic = {"name":toy.name,"image":images,"thumbnail":thumbnail,
+              "gcode":gcodes}
     toyJson = json.dumps(toyDic)
     print toyJson
     return HttpResponse(toyJson)

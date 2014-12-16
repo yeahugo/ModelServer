@@ -5,18 +5,24 @@ import json
 def image(request,oid,name):
     toy = Toy.objects(pk=oid).first()
     for image in toy.images:
-        print image.image.name
-        print name
         if str(image.image.name) == name:
             return HttpResponse(image.image.read(),
                         content_type=image.image.content_type,
                         )
+
 def thumbnail(request,oid,name):
     toy = Toy.objects(pk=oid).first()
     for image in toy.thumbnail:
-        print image.image.name
-        print name
         if str(image.image.name) == name:
             return HttpResponse(image.image.read(),
                         content_type=image.image.content_type,
                         )
+def gcode(request,oid,name):
+    toy = Toy.objects(pk=oid).first()
+    for gcode_file in toy.gcode:
+        print gcode_file.data
+        if str(gcode_file.data.name) == name:
+            return HttpResponse(gcode_file.data.read(),
+                        content_type=gcode_file.data.content_type,
+                        )
+

@@ -4,4 +4,5 @@ from files import views
 urlpatterns = [
     url(r'^image/(\w+)/(.+)',views.image),
     url(r'^thumbnail/(\w+)/(.+)',views.thumbnail),
+    url(r'^gcode/(\w+)/(.+)',views.gcode),
 ]
