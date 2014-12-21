@@ -46,10 +46,14 @@ def detail(request,oid):
     for gcode in toy.gcode:
         gcode_url = "api/gcode/"+str(toy.id)+"/"+str(gcode.data.name)
         gcodes.append(gcode_url)
-    toyDic = {"name":toy.name,"image":images,"thumbnail":thumbnail,
-              "gcode":gcodes}
+    toyDic = json.loads(toy.to_json())
+#    toyDic = {"name":toy.name,"image":images,"thumbnail":thumbnail,  "gcode":gcodes}
+    toyDic['images'] = images
+    toyDic['thumbnail'] = thumbnail
+    toyDic['gcode'] = gcodes
+    toyDic['catalog'] = str(toy.catalog.id)
+    del toyDic['_id']
     toyJson = json.dumps(toyDic)
-    print toyJson
     return HttpResponse(toyJson)
 
 def catalog(request,catalogId):

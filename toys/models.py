@@ -26,3 +26,7 @@ class Toy(Document):
     images = ListField(EmbeddedDocumentField(EmImage))
     gcode = ListField(EmbeddedDocumentField(EmFile))
     catalog = ReferenceField(Catalog)
+    object_size = StringField(max_length = 200)
+    file_size = StringField(max_length = 200)
+    parts_num = StringField(max_length = 10)
+    description = StringField(max_length = 200000)
