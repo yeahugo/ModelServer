@@ -1,7 +1,7 @@
 #from django.db import models
 from mongoengine import *
 from ModelServer.settings import DBNAME
-
+from catalog.models import Catalog
 
 # Create your models here.
 #class Model(models.Model):
@@ -25,20 +25,4 @@ class Toy(Document):
     thumbnail = ListField(EmbeddedDocumentField(EmImage))
     images = ListField(EmbeddedDocumentField(EmImage))
     gcode = ListField(EmbeddedDocumentField(EmFile))
-#
-#class Image(EmbeddedDocument):
-#    name = StringField(max_length=200)
-#    image_path = StringField(max_length=200)
-
-#class Toy(Document):
-#    name = StringField(max_length=200)
-#    thumbnail = ListField(EmbeddedDocumentField(Image))
-#    image = ListField(EmbeddedDocumentField(Image))
-#    create_date = DateTimeField()
-
-#    meta = {
-#        'allow_inheritance': True
-#        'indexes':[
-#            'name',('+thumbnail')
-#        ]
-#    }
+    catalog = ReferenceField(Catalog)

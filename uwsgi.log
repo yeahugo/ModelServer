@@ -686,3 +686,249 @@ Traceback (most recent call last):
     "The translation infrastructure cannot be initialized before the "
 django.core.exceptions.AppRegistryNotReady: The translation infrastructure cannot be initialized before the apps registry is ready. Check that you don't make non-lazy gettext calls at import time.
 [pid: 1480|app: 0|req: 8/12] 127.0.0.1 () {38 vars in 706 bytes} [Fri Dec 12 14:20:44 2014] GET /favicon.ico => generated 0 bytes in 90 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 0)
+No handlers could be found for logger "django.request"
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/wsgi.py", line 187, in __call__
+    response = self.get_response(request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 199, in get_response
+    response = self.handle_uncaught_exception(request, resolver, sys.exc_info())
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 236, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+  File "/Library/Python/2.7/site-packages/django/views/debug.py", line 91, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "/Library/Python/2.7/site-packages/django/views/debug.py", line 350, in get_traceback_html
+    return t.render(c)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 148, in render
+    return self._render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 142, in _render
+    return self.nodelist.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 844, in render
+    bit = self.render_node(node, context)
+  File "/Library/Python/2.7/site-packages/django/template/debug.py", line 80, in render_node
+    return node.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/debug.py", line 90, in render
+    output = self.filter_expression.resolve(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 624, in resolve
+    new_obj = func(obj, *arg_vals)
+  File "/Library/Python/2.7/site-packages/django/template/defaultfilters.py", line 769, in date
+    return format(value, arg)
+  File "/Library/Python/2.7/site-packages/django/utils/dateformat.py", line 343, in format
+    return df.format(format_string)
+  File "/Library/Python/2.7/site-packages/django/utils/dateformat.py", line 35, in format
+    pieces.append(force_text(getattr(self, piece)()))
+  File "/Library/Python/2.7/site-packages/django/utils/dateformat.py", line 268, in r
+    return self.format('D, j M Y H:i:s O')
+  File "/Library/Python/2.7/site-packages/django/utils/dateformat.py", line 35, in format
+    pieces.append(force_text(getattr(self, piece)()))
+  File "/Library/Python/2.7/site-packages/django/utils/encoding.py", line 85, in force_text
+    s = six.text_type(s)
+  File "/Library/Python/2.7/site-packages/django/utils/functional.py", line 144, in __text_cast
+    return func(*self.__args, **self.__kw)
+  File "/Library/Python/2.7/site-packages/django/utils/translation/__init__.py", line 83, in ugettext
+    return _trans.ugettext(message)
+  File "/Library/Python/2.7/site-packages/django/utils/translation/trans_real.py", line 325, in ugettext
+    return do_translate(message, 'ugettext')
+  File "/Library/Python/2.7/site-packages/django/utils/translation/trans_real.py", line 306, in do_translate
+    _default = translation(settings.LANGUAGE_CODE)
+  File "/Library/Python/2.7/site-packages/django/utils/translation/trans_real.py", line 209, in translation
+    default_translation = _fetch(settings.LANGUAGE_CODE)
+  File "/Library/Python/2.7/site-packages/django/utils/translation/trans_real.py", line 189, in _fetch
+    "The translation infrastructure cannot be initialized before the "
+django.core.exceptions.AppRegistryNotReady: The translation infrastructure cannot be initialized before the apps registry is ready. Check that you don't make non-lazy gettext calls at import time.
+[pid: 1479|app: 0|req: 1/13] 127.0.0.1 () {38 vars in 866 bytes} [Wed Dec 17 14:01:04 2014] GET / => generated 0 bytes in 663 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/wsgi.py", line 187, in __call__
+    response = self.get_response(request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 199, in get_response
+    response = self.handle_uncaught_exception(request, resolver, sys.exc_info())
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 236, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+  File "/Library/Python/2.7/site-packages/django/views/debug.py", line 91, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "/Library/Python/2.7/site-packages/django/views/debug.py", line 350, in get_traceback_html
+    return t.render(c)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 148, in render
+    return self._render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 142, in _render
+    return self.nodelist.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 844, in render
+    bit = self.render_node(node, context)
+  File "/Library/Python/2.7/site-packages/django/template/debug.py", line 80, in render_node
+    return node.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/debug.py", line 90, in render
+    output = self.filter_expression.resolve(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 624, in resolve
+    new_obj = func(obj, *arg_vals)
+  File "/Library/Python/2.7/site-packages/django/template/defaultfilters.py", line 769, in date
+    return format(value, arg)
+  File "/Library/Python/2.7/site-packages/django/utils/dateformat.py", line 343, in format
+    return df.format(format_string)
+  File "/Library/Python/2.7/site-packages/django/utils/dateformat.py", line 35, in format
+    pieces.append(force_text(getattr(self, piece)()))
+  File "/Library/Python/2.7/site-packages/django/utils/dateformat.py", line 268, in r
+    return self.format('D, j M Y H:i:s O')
+  File "/Library/Python/2.7/site-packages/django/utils/dateformat.py", line 35, in format
+    pieces.append(force_text(getattr(self, piece)()))
+  File "/Library/Python/2.7/site-packages/django/utils/encoding.py", line 85, in force_text
+    s = six.text_type(s)
+  File "/Library/Python/2.7/site-packages/django/utils/functional.py", line 144, in __text_cast
+    return func(*self.__args, **self.__kw)
+  File "/Library/Python/2.7/site-packages/django/utils/translation/__init__.py", line 83, in ugettext
+    return _trans.ugettext(message)
+  File "/Library/Python/2.7/site-packages/django/utils/translation/trans_real.py", line 325, in ugettext
+    return do_translate(message, 'ugettext')
+  File "/Library/Python/2.7/site-packages/django/utils/translation/trans_real.py", line 306, in do_translate
+    _default = translation(settings.LANGUAGE_CODE)
+  File "/Library/Python/2.7/site-packages/django/utils/translation/trans_real.py", line 209, in translation
+    default_translation = _fetch(settings.LANGUAGE_CODE)
+  File "/Library/Python/2.7/site-packages/django/utils/translation/trans_real.py", line 189, in _fetch
+    "The translation infrastructure cannot be initialized before the "
+django.core.exceptions.AppRegistryNotReady: The translation infrastructure cannot be initialized before the apps registry is ready. Check that you don't make non-lazy gettext calls at import time.
+[pid: 1478|app: 0|req: 5/14] 127.0.0.1 () {38 vars in 817 bytes} [Wed Dec 17 14:01:05 2014] GET /favicon.ico => generated 0 bytes in 207 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/wsgi.py", line 187, in __call__
+    response = self.get_response(request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 199, in get_response
+    response = self.handle_uncaught_exception(request, resolver, sys.exc_info())
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 236, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+  File "/Library/Python/2.7/site-packages/django/views/debug.py", line 91, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "/Library/Python/2.7/site-packages/django/views/debug.py", line 350, in get_traceback_html
+    return t.render(c)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 148, in render
+    return self._render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 142, in _render
+    return self.nodelist.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 844, in render
+    bit = self.render_node(node, context)
+  File "/Library/Python/2.7/site-packages/django/template/debug.py", line 80, in render_node
+    return node.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/debug.py", line 90, in render
+    output = self.filter_expression.resolve(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 624, in resolve
+    new_obj = func(obj, *arg_vals)
+  File "/Library/Python/2.7/site-packages/django/template/defaultfilters.py", line 769, in date
+    return format(value, arg)
+  File "/Library/Python/2.7/site-packages/django/utils/dateformat.py", line 343, in format
+    return df.format(format_string)
+  File "/Library/Python/2.7/site-packages/django/utils/dateformat.py", line 35, in format
+    pieces.append(force_text(getattr(self, piece)()))
+  File "/Library/Python/2.7/site-packages/django/utils/dateformat.py", line 268, in r
+    return self.format('D, j M Y H:i:s O')
+  File "/Library/Python/2.7/site-packages/django/utils/dateformat.py", line 35, in format
+    pieces.append(force_text(getattr(self, piece)()))
+  File "/Library/Python/2.7/site-packages/django/utils/encoding.py", line 85, in force_text
+    s = six.text_type(s)
+  File "/Library/Python/2.7/site-packages/django/utils/functional.py", line 144, in __text_cast
+    return func(*self.__args, **self.__kw)
+  File "/Library/Python/2.7/site-packages/django/utils/translation/__init__.py", line 83, in ugettext
+    return _trans.ugettext(message)
+  File "/Library/Python/2.7/site-packages/django/utils/translation/trans_real.py", line 325, in ugettext
+    return do_translate(message, 'ugettext')
+  File "/Library/Python/2.7/site-packages/django/utils/translation/trans_real.py", line 306, in do_translate
+    _default = translation(settings.LANGUAGE_CODE)
+  File "/Library/Python/2.7/site-packages/django/utils/translation/trans_real.py", line 209, in translation
+    default_translation = _fetch(settings.LANGUAGE_CODE)
+  File "/Library/Python/2.7/site-packages/django/utils/translation/trans_real.py", line 189, in _fetch
+    "The translation infrastructure cannot be initialized before the "
+django.core.exceptions.AppRegistryNotReady: The translation infrastructure cannot be initialized before the apps registry is ready. Check that you don't make non-lazy gettext calls at import time.
+[pid: 1480|app: 0|req: 9/15] 127.0.0.1 () {38 vars in 817 bytes} [Wed Dec 17 14:01:21 2014] GET /favicon.ico => generated 0 bytes in 165 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/wsgi.py", line 187, in __call__
+    response = self.get_response(request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 199, in get_response
+    response = self.handle_uncaught_exception(request, resolver, sys.exc_info())
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 236, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+  File "/Library/Python/2.7/site-packages/django/views/debug.py", line 91, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "/Library/Python/2.7/site-packages/django/views/debug.py", line 350, in get_traceback_html
+    return t.render(c)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 148, in render
+    return self._render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 142, in _render
+    return self.nodelist.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 844, in render
+    bit = self.render_node(node, context)
+  File "/Library/Python/2.7/site-packages/django/template/debug.py", line 80, in render_node
+    return node.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/debug.py", line 90, in render
+    output = self.filter_expression.resolve(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 624, in resolve
+    new_obj = func(obj, *arg_vals)
+  File "/Library/Python/2.7/site-packages/django/template/defaultfilters.py", line 769, in date
+    return format(value, arg)
+  File "/Library/Python/2.7/site-packages/django/utils/dateformat.py", line 343, in format
+    return df.format(format_string)
+  File "/Library/Python/2.7/site-packages/django/utils/dateformat.py", line 35, in format
+    pieces.append(force_text(getattr(self, piece)()))
+  File "/Library/Python/2.7/site-packages/django/utils/dateformat.py", line 268, in r
+    return self.format('D, j M Y H:i:s O')
+  File "/Library/Python/2.7/site-packages/django/utils/dateformat.py", line 35, in format
+    pieces.append(force_text(getattr(self, piece)()))
+  File "/Library/Python/2.7/site-packages/django/utils/encoding.py", line 85, in force_text
+    s = six.text_type(s)
+  File "/Library/Python/2.7/site-packages/django/utils/functional.py", line 144, in __text_cast
+    return func(*self.__args, **self.__kw)
+  File "/Library/Python/2.7/site-packages/django/utils/translation/__init__.py", line 83, in ugettext
+    return _trans.ugettext(message)
+  File "/Library/Python/2.7/site-packages/django/utils/translation/trans_real.py", line 325, in ugettext
+    return do_translate(message, 'ugettext')
+  File "/Library/Python/2.7/site-packages/django/utils/translation/trans_real.py", line 306, in do_translate
+    _default = translation(settings.LANGUAGE_CODE)
+  File "/Library/Python/2.7/site-packages/django/utils/translation/trans_real.py", line 209, in translation
+    default_translation = _fetch(settings.LANGUAGE_CODE)
+  File "/Library/Python/2.7/site-packages/django/utils/translation/trans_real.py", line 189, in _fetch
+    "The translation infrastructure cannot be initialized before the "
+django.core.exceptions.AppRegistryNotReady: The translation infrastructure cannot be initialized before the apps registry is ready. Check that you don't make non-lazy gettext calls at import time.
+[pid: 1480|app: 0|req: 10/16] 127.0.0.1 () {38 vars in 755 bytes} [Wed Dec 17 14:09:09 2014] GET / => generated 0 bytes in 74 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/wsgi.py", line 187, in __call__
+    response = self.get_response(request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 199, in get_response
+    response = self.handle_uncaught_exception(request, resolver, sys.exc_info())
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 236, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+  File "/Library/Python/2.7/site-packages/django/views/debug.py", line 91, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "/Library/Python/2.7/site-packages/django/views/debug.py", line 350, in get_traceback_html
+    return t.render(c)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 148, in render
+    return self._render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 142, in _render
+    return self.nodelist.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 844, in render
+    bit = self.render_node(node, context)
+  File "/Library/Python/2.7/site-packages/django/template/debug.py", line 80, in render_node
+    return node.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/debug.py", line 90, in render
+    output = self.filter_expression.resolve(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 624, in resolve
+    new_obj = func(obj, *arg_vals)
+  File "/Library/Python/2.7/site-packages/django/template/defaultfilters.py", line 769, in date
+    return format(value, arg)
+  File "/Library/Python/2.7/site-packages/django/utils/dateformat.py", line 343, in format
+    return df.format(format_string)
+  File "/Library/Python/2.7/site-packages/django/utils/dateformat.py", line 35, in format
+    pieces.append(force_text(getattr(self, piece)()))
+  File "/Library/Python/2.7/site-packages/django/utils/dateformat.py", line 268, in r
+    return self.format('D, j M Y H:i:s O')
+  File "/Library/Python/2.7/site-packages/django/utils/dateformat.py", line 35, in format
+    pieces.append(force_text(getattr(self, piece)()))
+  File "/Library/Python/2.7/site-packages/django/utils/encoding.py", line 85, in force_text
+    s = six.text_type(s)
+  File "/Library/Python/2.7/site-packages/django/utils/functional.py", line 144, in __text_cast
+    return func(*self.__args, **self.__kw)
+  File "/Library/Python/2.7/site-packages/django/utils/translation/__init__.py", line 83, in ugettext
+    return _trans.ugettext(message)
+  File "/Library/Python/2.7/site-packages/django/utils/translation/trans_real.py", line 325, in ugettext
+    return do_translate(message, 'ugettext')
+  File "/Library/Python/2.7/site-packages/django/utils/translation/trans_real.py", line 306, in do_translate
+    _default = translation(settings.LANGUAGE_CODE)
+  File "/Library/Python/2.7/site-packages/django/utils/translation/trans_real.py", line 209, in translation
+    default_translation = _fetch(settings.LANGUAGE_CODE)
+  File "/Library/Python/2.7/site-packages/django/utils/translation/trans_real.py", line 189, in _fetch
+    "The translation infrastructure cannot be initialized before the "
+django.core.exceptions.AppRegistryNotReady: The translation infrastructure cannot be initialized before the apps registry is ready. Check that you don't make non-lazy gettext calls at import time.
+[pid: 1478|app: 0|req: 6/17] 127.0.0.1 () {38 vars in 706 bytes} [Wed Dec 17 14:09:09 2014] GET /favicon.ico => generated 0 bytes in 59 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 0)
