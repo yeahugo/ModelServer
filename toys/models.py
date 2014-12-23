@@ -4,12 +4,6 @@ from ModelServer.settings import DBNAME
 from catalog.models import Catalog
 
 # Create your models here.
-#class Model(models.Model):
-#    name = models.CharField(max_length=200)
-#    thumbnail_url = models.ImageField(upload_to='toys')
-#    image_url = models.ImageField(upload_to='toys')
-#    create_date = models.DateField()
-
 class EmImage(EmbeddedDocument):
 #    image = db.ReferenceField(Image)
     name = StringField(max_length=200)
@@ -29,4 +23,5 @@ class Toy(Document):
     object_size = StringField(max_length = 200)
     file_size = StringField(max_length = 200)
     parts_num = StringField(max_length = 10)
+    print_time = StringField(max_length = 100)
     description = StringField(max_length = 200000)

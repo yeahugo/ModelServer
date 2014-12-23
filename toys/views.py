@@ -16,7 +16,7 @@ def get_toy_list(toys):
         del toy_dict['catalog']
         thumbnails = []
         thumbnails = get_thumbnail(toy)
-        toy_dict['thumbnail'] = json.dumps(thumbnails)
+        toy_dict['thumbnail'] = thumbnails
         toy_dict['id'] = str(toy.id)
         toy_dict['catalog'] = str(toy.catalog.id)
         toys_json.append(toy_dict)
@@ -49,6 +49,7 @@ def detail(request,oid):
     toyDic = json.loads(toy.to_json())
 #    toyDic = {"name":toy.name,"image":images,"thumbnail":thumbnail,  "gcode":gcodes}
     toyDic['images'] = images
+#    toyDic['images'] = json.dumps(images)
     toyDic['thumbnail'] = thumbnail
     toyDic['gcode'] = gcodes
     toyDic['catalog'] = str(toy.catalog.id)
