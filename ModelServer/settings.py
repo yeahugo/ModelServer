@@ -17,7 +17,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 DBNAME = 'ModelDB'
 
-TEST_RUNNER = 'ModelServer.tests.NoSQLTestRunner'
+#TEST_RUNNER = 'ModelServer.tests.NoSQLTestRunner'
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
@@ -87,8 +87,8 @@ WSGI_APPLICATION = 'ModelServer.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': '',
-#        'ENGINE': 'django.db.backends.sqlite3',
+#        'ENGINE': '',
+        'ENGINE': 'django.db.backends.sqlite3',
 #        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 #        'ENGINE': 'django.db.backends.dummy'
 #        'ENGINE': 'django_mongodb_engine',

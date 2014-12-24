@@ -1,11 +1,11 @@
 import json
 from django.test import TestCase, Client
-from toy.models import Toy
+from toys.models import Toy
 from catalog.models import Catalog
 
-class ModelServerTestCase(TestCase):
+class AiModelTestCase(TestCase):
     def setUp(self):
-        Toy.drop_collection()
-        Catalog.drop_collection()
+#       Toy.drop_collection()
+#        Catalog.drop_collection()
         client = Client()
         self.client = client
