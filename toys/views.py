@@ -3,6 +3,8 @@ from toys.models import Toy
 from django.core import serializers
 import json
 from corelib.json_response import  JsonResponse
+from bson.json_util import loads
+
 #from corelib.protocol as PC
 
 # Create your views here.
@@ -22,13 +24,18 @@ def get_toy_list(toys):
         toy_dict['id'] = str(toy.id)
         toy_dict['catalog'] = str(toy.catalog.id)
         toys_json.append(toy_dict)
-#    toys_json = json.dumps(toys_json)
     return toys_json
+
+
+def get_Oid(file_object):
+    file_dict = loads(file_object.to_json())
+    file_object = file_dict.values()[0]
+    return str(file_object)
 
 def get_thumbnail(toy):
     thumbnails = []
     for thumb in toy.thumbnail:
-        thumbnail_url = "api/thumbnail/"+str(toy.id)+"/"+str(thumb.image.name)
+        thumbnail_url = "api/thumbnail/"+str(toy.id)+"/"+get_Oid(thumb)
         thumbnails.append(thumbnail_url)
     return thumbnails
 
@@ -43,10 +50,10 @@ def detail(request,oid):
     gcodes = []
     thumbnail = get_thumbnail(toy)
     for image in toy.images:
-        image_url = "api/image/"+str(toy.id)+"/"+str(image.image.name)
+        image_url = "api/image/"+str(toy.id)+"/"+get_Oid(image)
         images.append(image_url)
     for gcode in toy.gcode:
-        gcode_url = "api/gcode/"+str(toy.id)+"/"+str(gcode.data.name)
+        gcode_url = "api/gcode/"+str(toy.id)+"/"+get_Oid(gcode)
         gcodes.append(gcode_url)
     toyDic = json.loads(toy.to_json())
     toyDic['images'] = images
@@ -54,11 +61,9 @@ def detail(request,oid):
     toyDic['gcode'] = gcodes
     toyDic['catalog'] = str(toy.catalog.id)
     del toyDic['_id']
-#    toyJson = json.dumps(toyDic)
     return JsonResponse(toyDic)
 
 def catalog(request,catalogId):
     toys = Toy.objects(catalog=catalogId).all()
-    toys_json = get_toy_list(toys)
-    resultDic = {"data":toys_json}
-    return JsonResponse(resultDic)
+    toys_dict = get_toy_list(toys)
+    return JsonResponse(toys_dict)
