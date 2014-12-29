@@ -1,0 +1,5 @@
+mongonengine
+PIL
+python-dev
+gunicorn
+gevent
